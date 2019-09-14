@@ -1,11 +1,15 @@
 const transition = (key) => {
 	key.classList.add("playing");
-	setTimeout(() => key.classList.remove("playing"), 50);
+
+	// This might not always be insync with transitions set in css
+	// setTimeout(() => key.classList.remove("playing"), 50);
+
+	key.addEventListener('transitionend', 
+		() => key.classList.remove("playing"));
 }
 
 const play = (e) => {
 	const keyCode = e.keyCode;
-	// if(![65,83,68,70,71,72,74,75,76].includes(keyCode)) return;
 	const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
 	const key = document.querySelector(`div[data-key="${keyCode}"]`);
 
