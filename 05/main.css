@@ -1,0 +1,55 @@
+body {
+	margin: 0;
+}
+
+.panels {
+	display: flex;
+	flex-flow: row nowrap;
+	height: 100vh;
+	padding: auto;
+	overflow: hidden;
+}
+
+.panel {
+	align-items: stretch;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	text-align: center;
+
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	flex-direction: column;
+	transition-duration: 1s;
+
+	font-family: 'Tahoma';
+}
+
+.panel > * {
+	margin: 0;
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	pointer-events: none;
+}
+
+.panel h2 {
+	align-items: center;
+	padding: 10px;
+}
+
+.panel p {
+	align-items: top;
+	transform: translateY(100%);
+	transition-duration: 2s;
+}
+
+.panel.panel-open p {
+	transform: translateY(0);
+	transition-duration: 2s;
+}
+
+.panel.panel-open {
+	flex: 5;
+}
