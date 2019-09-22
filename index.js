@@ -6,7 +6,9 @@ const challenges = [
 	"02 - JS and CSS Clock",
 	"03 - CSS Variables",
 	"04 - Array Cardio Day 1",
-	"05 - Flex Panel Gallery"
+	"05 - Flex Panel Gallery",
+	"06",
+	"07 - Array Cardio Day 2"
 ];
 
 
