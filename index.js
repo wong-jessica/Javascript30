@@ -8,7 +8,8 @@ const challenges = [
 	"04 - Array Cardio Day 1",
 	"05 - Flex Panel Gallery",
 	"06",
-	"07 - Array Cardio Day 2"
+	"07 - Array Cardio Day 2",
+	"08 - Fun with HTML5 Canvas"
 ];
 
 
