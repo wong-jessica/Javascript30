@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('Hello world');
+
+    // Interpolated
+    let insert = "Hey";
+    console.log(`The console says '${insert}'`);
+
+    // Styled
+
+    // warning!
+    console.warn('Something isn\'t right..');
+
+    // Error :|
+    console.error('FATAL ERROR HAS OCCURRED');
+
+    // Info
+    console.info('Remember to water your plants for best chance of survival!');
+
+    // Testing
+    console.assert('This'=== 'That', 'This does not equal That');
+
+    // clearing
+    // console.clear();
+
+    // Viewing DOM Elements
+    const p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`Say hello to ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old.`);
+      console.log(`${dog.name} is ${dog.age*7} dog years old.`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    // counting
+    console.count('A');
+    console.count('B');
+    console.count('A');
+    console.count('D');
+    console.count('B');
+    console.count('B');
+    console.count('C');
+    console.count('D');
+    console.count('F');
+
+    // timing
+    console.time('Time to fetch data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(response => response.json())
+      .then(data => {
+        console.timeEnd('Time to fetch data');
+        console.log('This is the fetched data', data);
+      });
+
+    console.log('This shows how operations happen asychronously');
+    console.table(dogs);
+
+  </script>
+</body>
+</html>
