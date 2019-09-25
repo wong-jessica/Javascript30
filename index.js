@@ -11,7 +11,8 @@ const challenges = [
 	"07 - Array Cardio Day 2",
 	"08 - Fun with HTML5 Canvas",
 	"09 - Dev Tools Domination",
-	"10 - Hold Shift and Check Checkboxes"
+	"10 - Hold Shift and Check Checkboxes",
+	"11 - Custom Video Player"
 ];
 
 
