@@ -17,14 +17,14 @@ const challenges = [
 	"13 - Slide in on Scroll"
 ];
 
+	
 
-challenges.forEach((day, i) => {
+for (let i = 1; i <= challenges.length; i++) {
 	let li = document.createElement('li');
 	let a = document.createElement('a');
-	let day = i+1 < 10 ? `0${i+1}` : i;
+	let day = i < 10 ? `0${i}` : i;
 	a.href = baseUrl + day;
-	a.innerHTML = challenges[i];
+	a.innerHTML = challenges[i-1];
 	li.append(a);
 	document.querySelector('ul').append(li);
-
-})
+}
