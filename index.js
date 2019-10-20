@@ -16,7 +16,8 @@ const challenges = [
 	"12 - Key Sequence Detection",
 	"13 - Slide in on Scroll",
 	"14 - JavaScript References VS Copying",
-	"15 - LocalStorage"
+	"15 - LocalStorage",
+	"16 - Mouse Move Shadow"
 ];
 
 	
@@ -30,3 +31,11 @@ for (let i = 1; i <= challenges.length; i++) {
 	li.append(a);
 	document.querySelector('ul').append(li);
 }
+
+function sayHello() {
+	console.log("hello");
+}
+
+var func = sayHello;
+func.answer = 42;
+console.log(sayHello.answer);
